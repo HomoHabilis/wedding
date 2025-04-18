@@ -28,7 +28,6 @@ const welcomeEl = document.getElementById("welcome-text");
 const menuEl    = document.getElementById("menu");
 const tokenEl   = document.getElementById("token-text");
 const waLinkEl  = document.getElementById("whatsapp-link");
-const qrEl      = document.getElementById("qr-code");
 
 // 3. WhatsApp number (use WhatsApp Business if possible)
 const waNumber = "393331234567"; // country code + number, no “+” or spaces
@@ -51,9 +50,6 @@ function renderLanguage() {
   tokenEl.textContent = lang.tokenInfo;
   const msg = encodeURIComponent(lang.whatsappMsg);
   waLinkEl.href = `https://wa.me/${waNumber}?text=${msg}`;
-  // Generate & embed QR code via Google Chart API
-  const pageUrl = encodeURIComponent(window.location.href);
-  qrEl.src = `https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=${pageUrl}`;
 }
 
 // 6. Initialize
