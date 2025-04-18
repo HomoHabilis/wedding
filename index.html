@@ -1,38 +1,61 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Invito al Matrimonio</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Our Wedding | Il Nostro Matrimonio | Notre Mariage</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Add a nice Google Font (Optional) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1 id="welcome-text"></h1>
-    <div class="lang-switch">
-      <button data-lang="it">🇮🇹 Italiano</button>
-      <button data-lang="en">🇬🇧 English</button>
-      <button data-lang="fr">🇫🇷 Français</button>
-    </div>
-  </header>
 
-  <main>
-    <nav id="menu">
-      <!-- dynamic menu items -->
-    </nav>
-    <section id="info">
-      <!-- more info -->
-    </section>
-  </main>
+    <div class="container">
 
-  <footer>
-    <p id="token-text"></p>
-    <p>Contatta via WhatsApp: 
-      <a id="whatsapp-link" href="#" target="_blank">✉️ WhatsApp</a>
-    </p>
-    <img id="qr-code" alt="QR Code">
-  </footer>
+        <!-- Language Switcher -->
+        <div class="language-switcher">
+            <button data-lang="en" class="lang-button active">English</button>
+            <button data-lang="it" class="lang-button">Italiano</button>
+            <button data-lang="fr" class="lang-button">Français</button>
+        </div>
 
-  <script src="script.js"></script>
+        <!-- Welcome Text -->
+        <header>
+            <h1 id="welcome-title">[Your Names Here]</h1>
+            <p id="welcome-message" class="subtitle">Welcome to our wedding celebration!</p>
+        </header>
+
+        <!-- Main Info Section (Add your details here) -->
+        <main>
+            <h2 id="details-header">Details</h2>
+            <p id="details-content">
+                We are so excited to share our special day with you!
+                More information about the schedule, location, and registry will be added soon.
+                <br><br>
+                Date: [Wedding Date] <br>
+                Time: [Wedding Time] <br>
+                Location: [Wedding Venue Name & Address]
+            </p>
+             <!-- Add more sections as needed -->
+            <!--
+            Example:
+            <h2 id="schedule-header">Schedule</h2>
+            <p id="schedule-content">Ceremony: [Time], Reception: [Time]</p>
+            -->
+        </main>
+
+        <!-- Photo Token Info -->
+        <footer>
+            <p id="photo-info">
+                At the reception, you will receive 2 tokens per guest for the photo booth/printer. Have fun capturing memories!
+                For any questions or specific photo requests during the event, please feel free to contact [Name] via WhatsApp at: <strong id="whatsapp-number">[Your WhatsApp Number Here]</strong>.
+            </p>
+        </footer>
+
+    </div> <!-- /container -->
+
+    <script src="script.js"></script>
 </body>
 </html>

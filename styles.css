@@ -1,18 +1,130 @@
+/* Basic Reset & Defaults */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-  font-family: sans-serif;
-  margin: 0; padding: 0;
-  display: flex; flex-direction: column;
-  min-height: 100vh;
+    font-family: 'Poppins', sans-serif; /* Modern sans-serif for body text */
+    line-height: 1.6;
+    color: #333;
+    background-color: #fdfaf6; /* Soft off-white background */
+    padding: 20px;
 }
-header, footer { background: #f8f0e8; padding: 1rem; text-align: center; }
-main { flex: 1; padding: 1rem; }
-.lang-switch button {
-  margin: 0 .5rem; padding: .5rem 1rem;
-  border: none; background: #ddd; cursor: pointer;
-  border-radius: .25rem;
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
 }
-.lang-switch button:hover { background: #ccc; }
-nav a {
-  display: block; margin: .5rem 0;
-  text-decoration: none; color: #333;
+
+/* Typography */
+h1, h2 {
+    font-family: 'Playfair Display', serif; /* Elegant serif for headings */
+    color: #5a4e46; /* Earthy brown tone */
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #777;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-top: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    display: inline-block; /* Prevents border stretching full width */
+}
+
+p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Language Switcher */
+.language-switcher {
+    text-align: right;
+    margin-bottom: 25px;
+}
+
+.lang-button {
+    background-color: #f0eade; /* Light beige */
+    border: 1px solid #dcd1c6;
+    color: #5a4e46;
+    padding: 8px 15px;
+    margin-left: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.lang-button:hover {
+    background-color: #e4d5c8;
+}
+
+.lang-button.active {
+    background-color: #5a4e46; /* Darker brown for active */
+    color: #fff;
+    font-weight: bold;
+    border-color: #5a4e46;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Responsive adjustments (optional but good practice) */
+@media (max-width: 600px) {
+    .container {
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .subtitle {
+        font-size: 1em;
+    }
+
+    .language-switcher {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+     .lang-button {
+        padding: 6px 12px;
+        margin: 3px;
+     }
 }
