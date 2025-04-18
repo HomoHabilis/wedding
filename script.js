@@ -2,19 +2,16 @@
 const texts = {
   it: {
     welcome: "Benvenuti al nostro matrimonio!",
-    menu: ["Cerimonia", "Ricevimento", "Info Viaggio", "RSVP"],
     tokenInfo: "Riceverete 2 token per stampare le foto. Contattateci su WhatsApp.",
     whatsappMsg: "Ciao! Ho bisogno di token per la stampa delle foto."
   },
   en: {
     welcome: "Welcome to our wedding!",
-    menu: ["Ceremony", "Reception", "Travel Info", "RSVP"],
     tokenInfo: "You’ll get 2 tokens for printing photos. Contact us on WhatsApp.",
     whatsappMsg: "Hi! I need tokens for the photo printing."
   },
   fr: {
     welcome: "Bienvenue à notre mariage !",
-    menu: ["Cérémonie", "Réception", "Infos Voyage", "RSVP"],
     tokenInfo: "Vous recevrez 2 jetons pour imprimer les photos. Contactez-nous sur WhatsApp.",
     whatsappMsg: "Bonjour ! J'ai besoin de jetons pour l'impression de photos."
   }
@@ -25,7 +22,6 @@ let currentLang = defaultLang;
 
 // 2. DOM elements
 const welcomeEl = document.getElementById("welcome-text");
-const menuEl    = document.getElementById("menu");
 const tokenEl   = document.getElementById("token-text");
 const waLinkEl  = document.getElementById("whatsapp-link");
 
