@@ -3,7 +3,7 @@ const texts = {
   it: {
     welcome: "Benvenuti al nostro matrimonio!",
     // mainInfo: "...", // Removed, replaced by the menu display
-    tokenInfo: "Riceverete 2 gettoni da stampare con Ariana, che gestisce il photobooth. Contattatela su WhatsApp, il link è qui sotto.", // Merged info here
+    tokenInfo: "Riceverete 2 gettoni da stampare con Arianna, che gestisce il photobooth. Contattatela su WhatsApp, il link è qui sotto.", // Merged info here
     whatsappMsg: "Ciao! Sono del matrimonio e devo inviarti foto",
     menu: [
       {
@@ -42,7 +42,7 @@ const texts = {
   en: {
     welcome: "Welcome to our wedding!",
     // mainInfo: "...", // Removed
-    tokenInfo: "You will receive 2 tokens to print photos with Ariana, who manages the photobooth. Contact her on WhatsApp using the link below.", // Merged info here
+    tokenInfo: "You will receive 2 tokens to print photos with Arianna, who manages the photobooth. Contact her on WhatsApp using the link below.", // Merged info here
     whatsappMsg: "Hi! I'm from the wedding and need to send you photos", // Slightly adjusted message
     menu: [
       {
@@ -81,7 +81,7 @@ const texts = {
   fr: {
     welcome: "Bienvenue à notre mariage !",
     // mainInfo: "...", // Removed
-    tokenInfo: "Vous recevrez 2 jetons pour imprimer des photos avec Ariana, responsable du photobooth. Contactez-la sur WhatsApp via le lien ci-dessous.", // Merged info here
+    tokenInfo: "Vous recevrez 2 jetons pour imprimer des photos avec Arianna, responsable du photobooth. Contactez-la sur WhatsApp via le lien ci-dessous.", // Merged info here
     whatsappMsg: "Bonjour ! Je suis du mariage et je dois vous envoyer des photos", // Slightly adjusted message
     menu: [
       {
