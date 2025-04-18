@@ -26,7 +26,7 @@ const tokenEl   = document.getElementById("token-text");
 const waLinkEl  = document.getElementById("whatsapp-link");
 
 // 3. WhatsApp number (use WhatsApp Business if possible)
-const waNumber = "393331234567"; // country code + number, no “+” or spaces
+const waNumber = "3933343027495"; // country code + number, no “+” or spaces
 
 // 4. Language switch buttons
 document.querySelectorAll(".lang-switch button")
