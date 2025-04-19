@@ -2,6 +2,9 @@
 const texts = {
   it: {
     welcome: "Benvenuti al nostro matrimonio!",
+    // === NEW EXPLANATION TEXT ===
+    explanation: "Siamo così felici di condividere questo giorno speciale con voi! Qui sotto trovate il menù della cena. Speriamo sia di vostro gradimento.",
+    // ============================
     tokenInfo: "Riceverete 2 gettoni da stampare con Arianna, che gestisce il photobooth. Contattatela su WhatsApp, il link è qui sotto.", // Merged info here
     whatsappMsg: "Ciao! Sono al matrimonio e voglio inviarti foto da stampare",
     menu: [
@@ -13,7 +16,8 @@ const texts = {
   },
   en: {
     welcome: "Welcome to our wedding!",
-    tokenInfo: "You will receive 2 tokens to print photos with Arianna, who manages the photobooth. Contact her on WhatsApp using the link below.", // Merged info here
+	explanation: "We are so happy to share this special day with you! Below you can find the dinner menu. We hope you enjoy it.",    
+	tokenInfo: "You will receive 2 tokens to print photos with Arianna, who manages the photobooth. Contact her on WhatsApp using the link below.", // Merged info here
     whatsappMsg: "Hi! I'm at the wedding and need to send you photos for printing.", // Slightly adjusted message
     menu: [
       { title: "Appetizers", dishes: ["Cuttlefish salad, shrimp, and crispy vegetables in citronette", "Marinated salmon on taralli cheesecake, orange-scented robiola cheese", "Eggplant parmigiana, panko shrimp, stracciatella cream", "Seared tuna, guacamole, and mango puree"] },
@@ -24,6 +28,9 @@ const texts = {
   },
   fr: {
     welcome: "Bienvenue à notre mariage !",
+    // === NEW EXPLANATION TEXT ===
+    explanation: "Nous sommes si heureux de partager ce jour spécial avec vous ! Vous trouverez ci-dessous le menu du dîner. Nous espérons qu'il vous plaira.",
+    // ============================
     tokenInfo: "Vous recevrez 2 jetons pour imprimer des photos avec Arianna, responsable du photobooth. Contactez-la sur WhatsApp via le lien ci-dessous.", // Merged info here
     whatsappMsg: "Bonjour ! Je suis au mariage et je veux vous envoyer des photos", // Slightly adjusted message
     menu: [
@@ -33,9 +40,11 @@ const texts = {
       { title: "Dessert", dishes: ["Pâtisseries variées et fruits", "Douce surprise"] }
     ]
   },
-  // --- START: Added Spanish ---
   es: {
     welcome: "¡Bienvenidos a nuestra boda!",
+    // === NEW EXPLANATION TEXT ===
+    explanation: "¡Estamos muy felices de compartir este día especial con ustedes! A continuación encontrarán el menú de la cena. Esperamos que lo disfruten.",
+    // ============================
     tokenInfo: "Recibirán 2 fichas para imprimir fotos con Arianna, que gestiona el photobooth. Contáctala por WhatsApp usando el enlace de abajo.", // <-- UPDATED
     whatsappMsg: "¡Hola! Estoy en la boda y necesito enviarte fotos para imprimir.", // <-- UPDATED
     menu: [
@@ -45,10 +54,11 @@ const texts = {
       { title: "Postre", dishes: ["Pasteles variados y fruta", "Dulce sorpresa"] }
     ]
   },
-  // --- END: Added Spanish ---
-  // --- START: Added Finnish ---
   fi: {
     welcome: "Tervetuloa häihimme!",
+    // === NEW EXPLANATION TEXT ===
+    explanation: "Olemme niin onnellisia saadessamme jakaa tämän erityisen päivän kanssanne! Alta löydät illallismenun. Toivottavasti nautitte siitä.",
+    // ============================
     tokenInfo: "Saat 2 polettia valokuvien tulostamiseen Ariannan kanssa, joka hoitaa photoboothia. Ota häneen yhteyttä WhatsAppilla alla olevan linkin kautta.", // <-- UPDATED
     whatsappMsg: "Hei! Olen häissä ja minun pitää lähettää sinulle kuvia tulostettavaksi.", // <-- UPDATED
     menu: [
@@ -58,47 +68,39 @@ const texts = {
       { title: "Jälkiruoka", dishes: ["Valikoima leivonnaisia ja hedelmiä", "Makea yllätys"] }
     ]
   }
-  // --- END: Added Finnish ---
 };
 
+// --- Language Detection Logic (Keep from previous step if implemented) ---
 const defaultLang = "it";
-const supportedLangs = Object.keys(texts); // Get ['it', 'en', 'fr', 'es', 'fi']
+const supportedLangs = Object.keys(texts);
 
 function getInitialLanguage() {
-  // 1. Check browser's preferred language(s)
-  const browserLang = navigator.language || navigator.userLanguage; // e.g., "en-US", "fr-FR", "es", "fi"
-
+  const browserLang = navigator.language || navigator.userLanguage;
   if (browserLang) {
-    // Try exact match first (e.g., if you had 'en-US' defined)
-    if (supportedLangs.includes(browserLang)) {
-      return browserLang;
-    }
-    // Try matching the primary language code (e.g., "en" from "en-US")
     const primaryLang = browserLang.split('-')[0];
     if (supportedLangs.includes(primaryLang)) {
       return primaryLang;
     }
   }
-
-  // 2. Fallback to default language if no match found
   return defaultLang;
 }
 
-let currentLang = getInitialLanguage(); // Determine initial language automatically
-
+let currentLang = getInitialLanguage();
+// --- End Language Detection ---
 
 // 2. DOM elements
 const welcomeEl = document.getElementById("welcome-text");
-const tokenEl   = document.getElementById("token-text");
+const explanationEl = document.getElementById("explanation-text"); // Get explanation element
+const tokenEl = document.getElementById("token-text");
 const infoSectionEl = document.getElementById("info");
 const waLinkEl  = document.getElementById("whatsapp-link");
+const langButtons = document.querySelectorAll(".lang-switch button"); // Get all lang buttons
 
 // 3. WhatsApp number (use WhatsApp Business if possible)
-const waNumber = "393515535262"; // country code + number, no “+” or spaces
+const waNumber = "393515535262";
 
 // 4. Language switch buttons
-document.querySelectorAll(".lang-switch button")
-  .forEach(btn => {
+langButtons.forEach(btn => {
     btn.addEventListener("click", () => {
       currentLang = btn.dataset.lang;
       renderLanguage();
@@ -106,31 +108,39 @@ document.querySelectorAll(".lang-switch button")
   });
 
 // 5. Fill in texts and links
+function updateActiveButton() {
+    langButtons.forEach(btn => {
+        if (btn.dataset.lang === currentLang) {
+            btn.classList.add("active-lang"); // Add class to active button
+        } else {
+            btn.classList.remove("active-lang"); // Remove from others
+        }
+    });
+}
+
+// 5. Fill in texts and links
 function renderLanguage() {
-  // Check if the selected language exists, fallback to default if not
   const lang = texts[currentLang] || texts[defaultLang];
   if (!texts[currentLang]) {
       console.warn(`Language '${currentLang}' not found. Falling back to '${defaultLang}'.`);
       currentLang = defaultLang; // Correct the currentLang if fallback occurred
   }
 
-
   // Update simple text elements
   welcomeEl.textContent = lang.welcome;
+  explanationEl.textContent = lang.explanation; // Update explanation text
   tokenEl.textContent = lang.tokenInfo;
+
   const msg = encodeURIComponent(lang.whatsappMsg);
   waLinkEl.href = `https://wa.me/${waNumber}?text=${msg}`;
 
   // Render the menu
-  infoSectionEl.innerHTML = ''; // Clear previous menu content
-
+  infoSectionEl.innerHTML = '';
   lang.menu.forEach(course => {
-    // Create heading for the course
     const courseTitle = document.createElement('h3');
     courseTitle.textContent = course.title;
     infoSectionEl.appendChild(courseTitle);
 
-    // Create list for the dishes
     const dishList = document.createElement('ul');
     course.dishes.forEach(dish => {
       const listItem = document.createElement('li');
@@ -139,36 +149,10 @@ function renderLanguage() {
     });
     infoSectionEl.appendChild(dishList);
   });
-}
 
-// 6. Initialize
-renderLanguage();
+  // Update the visual state of the language buttons
+  updateActiveButton();
+}
 
 // --- Optional: Add persistence using localStorage ---
-// If you want to remember the user's *manual* choice across sessions,
-// you could modify the getInitialLanguage function like this:
-
-/*
-function getInitialLanguageWithPersistence() {
-  // 1. Check if user manually selected a language before
-  const savedLang = localStorage.getItem('preferredLang');
-  if (savedLang && supportedLangs.includes(savedLang)) {
-    return savedLang;
-  }
-
-  // 2. Check browser's preferred language(s)
-  const browserLang = navigator.language || navigator.userLanguage;
-  if (browserLang) {
-    const primaryLang = browserLang.split('-')[0];
-    if (supportedLangs.includes(primaryLang)) {
-      return primaryLang;
-    }
-  }
-
-  // 3. Fallback to default language
-  return defaultLang;
-}
-
-let currentLang = getInitialLanguageWithPersistence(); // Use this line instead if you add persistence
-*/
-// --- End Optional Persistence ---
+renderLanguage(); // Initial render

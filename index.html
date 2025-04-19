@@ -4,16 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Invito al Matrimonio</title>
-  <!-- Example Font Link (Optional) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Merriweather:ital@0;1&display=swap" rel="stylesheet">
-  <!-- End Font Link -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Optional Wrapper Div -->
-  <!-- <div class="page-wrapper"> -->
 
     <header>
       <h1 id="welcome-text"></h1>
@@ -26,25 +22,30 @@
       </div>
     </header>
 
-    <main>
-      <nav id="menu">
-        <!-- dynamic menu items -->
-      </nav>
-      <section id="info">
-        <!-- Menu content will be dynamically inserted here -->
-      </section>
-    </main>
+  <main>
+    <!-- === NEW EXPLANATION SECTION === -->
+    <section id="explanation-section">
+      <p id="explanation-text"></p>
+    </section>
+    <!-- === END NEW SECTION === -->
 
-    <footer>
-      <p id="token-text"></p>
-      <p>Photobooth WhatsApp:
-        <a id="whatsapp-link" href="#" target="_blank">✉️ WhatsApp</a>
-      </p>
-      <!-- Add seashell image here if not using pseudo-elements -->
-      <!-- <img src="images/seashell.png" alt="" class="seashell-decoration"> -->
-    </footer>
+    <nav id="menu">
+      <!-- dynamic menu items -->
+    </nav>
+    <section id="info">
+      <!-- Menu content will be dynamically inserted here -->
+    </section>
+  </main>
 
-  <!-- </div> --> <!-- End Optional Wrapper Div -->
+  <footer>
+    <p id="token-text"></p>
+    <p>
+       <!-- Removed "Photobooth WhatsApp:" text, button is self-explanatory -->
+      <a id="whatsapp-link" href="#" target="_blank">✉️ Contatta Photobooth (WhatsApp)</a>
+    </p>
+    <!-- Optional: Seashell image -->
+    <!-- <img src="images/seashell.png" alt="" class="seashell-decoration"> -->
+  </footer>
 
   <script src="script.js"></script>
 </body>
