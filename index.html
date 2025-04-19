@@ -4,35 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Invito al Matrimonio</title>
+  <!-- Example Font Link (Optional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Merriweather:ital@0;1&display=swap" rel="stylesheet">
+  <!-- End Font Link -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1 id="welcome-text"></h1>
-    <div class="lang-switch">
-      <button data-lang="it">🇮🇹 Italiano</button>
-      <button data-lang="en">🇬🇧 English</button>
-      <button data-lang="fr">🇫🇷 Français</button>
-      <button data-lang="es">🇪🇸 Español</button>  <!-- Added -->
-      <button data-lang="fi">🇫🇮 Suomi</button>    <!-- Added -->
-    </div>
-  </header>
+  <!-- Optional Wrapper Div -->
+  <!-- <div class="page-wrapper"> -->
 
-  <main>
-    <nav id="menu">
-      <!-- dynamic menu items -->
-    </nav>
-    <section id="info">
-      <!-- Menu content will be dynamically inserted here by script.js -->
-    </section>
-  </main>
+    <header>
+      <h1 id="welcome-text"></h1>
+      <div class="lang-switch">
+        <button data-lang="it">🇮🇹 Italiano</button>
+        <button data-lang="en">🇬🇧 English</button>
+        <button data-lang="fr">🇫🇷 Français</button>
+        <button data-lang="es">🇪🇸 Español</button>
+        <button data-lang="fi">🇫🇮 Suomi</button>
+      </div>
+    </header>
 
-  <footer>
-    <p id="token-text"></p>
-    <p>Photobooth WhatsApp:
-      <a id="whatsapp-link" href="#" target="_blank">✉️ WhatsApp</a>
-    </p>
-  </footer>
+    <main>
+      <nav id="menu">
+        <!-- dynamic menu items -->
+      </nav>
+      <section id="info">
+        <!-- Menu content will be dynamically inserted here -->
+      </section>
+    </main>
+
+    <footer>
+      <p id="token-text"></p>
+      <p>Photobooth WhatsApp:
+        <a id="whatsapp-link" href="#" target="_blank">✉️ WhatsApp</a>
+      </p>
+      <!-- Add seashell image here if not using pseudo-elements -->
+      <!-- <img src="images/seashell.png" alt="" class="seashell-decoration"> -->
+    </footer>
+
+  <!-- </div> --> <!-- End Optional Wrapper Div -->
 
   <script src="script.js"></script>
 </body>
