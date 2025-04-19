@@ -61,7 +61,7 @@ body::after {
 footer::after {
   content: '';
   position: absolute;
-  bottom: 15px; /* Adjust vertical position */
+  bottom: 0px; /* Adjust vertical position */
   right: 15px; /* Adjust horizontal position */
   width: 60px;  /* Adjust size */
   height: 55px; /* Adjust size */
