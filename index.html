@@ -39,9 +39,14 @@
 
   <footer>
     <p id="token-text"></p>
-    <p>
-       <!-- Removed "Photobooth WhatsApp:" text, button is self-explanatory -->
-      <a id="whatsapp-link" href="#" target="_blank">✉️ Contatta Photobooth (WhatsApp)</a>
+    <p class="whatsapp-contact"> <!-- Added a class for potential styling -->
+       <!-- Text before the link -->
+      <span id="whatsapp-intro-text"></span> <!-- Placeholder for text like "Contact:" -->
+      <!-- The actual link -->
+      <a id="whatsapp-link" href="#" target="_blank" class="whatsapp-link-container">
+        <img src="images/whatsapp-icon.svg" alt="WhatsApp" class="whatsapp-icon">
+        <span id="whatsapp-link-text"></span> <!-- Placeholder for "Send photos..." -->
+      </a>
     </p>
     <!-- Optional: Seashell image -->
     <!-- <img src="images/seashell.png" alt="" class="seashell-decoration"> -->

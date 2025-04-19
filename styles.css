@@ -186,6 +186,43 @@ footer a:hover {
   text-decoration: underline;
 }
 
+/* Style for the introductory text (optional) */
+#whatsapp-intro-text {
+  /* Add specific styles if needed, e.g., font-weight: bold; */
+  margin-right: 4px; /* Space before the link starts */
+}
+
+/* Style for the link container (the <a> tag) */
+.whatsapp-link-container {
+  color: #008080; /* Teal link color */
+  text-decoration: none;
+  display: inline-flex; /* Align icon and text nicely */
+  align-items: center; /* Center items vertically */
+  vertical-align: middle; /* Align the whole container with surrounding text */
+}
+.whatsapp-link-container:hover {
+  text-decoration: underline; /* Underline text on hover */
+}
+.whatsapp-link-container:hover .whatsapp-icon {
+  /* Optional: add subtle effect on icon hover, e.g. */
+  /* opacity: 0.8; */
+}
+
+/* Style for the WhatsApp icon */
+.whatsapp-icon {
+  height: 2.5em; /* Adjust size relative to the surrounding text */
+  width: auto;   /* Maintain aspect ratio */
+  margin-right: 5px; /* Space between icon and the link text */
+  display: inline-block; /* Needed for vertical-align */
+  vertical-align: middle; /* Align with text */
+}
+
+/* Style for the text within the link */
+#whatsapp-link-text {
+   /* Text color is inherited from the <a> tag */
+   /* Add specific styles if needed */
+}
+
 /* === UPDATED: Language Switch Buttons === */
 .lang-switch {
   margin-top: 1em; /* Space below welcome heading */
@@ -239,6 +276,9 @@ footer a:hover {
 
   h1#welcome-text {
      font-size: 2.5em;
+
+  .whatsapp-icon {
+    height: 1.1em; /* Slightly smaller icon on mobile? */
   }
 
   footer::after { /* Adjust seashell position/size */
