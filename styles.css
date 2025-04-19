@@ -228,11 +228,6 @@ footer a:hover {
     padding-right: 15px;
   }
 
-  body::before,
-  body::after {
-    display: none; /* Hide borders on small screens */
-  }
-
   header, main, footer {
     max-width: 100%; /* Allow content to use more width */
   }
