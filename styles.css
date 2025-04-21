@@ -1,3 +1,42 @@
+/* --- Styles for the Image Slideshow --- */
+#image-slideshow {
+  position: relative; /* Establishes positioning context for images */
+  max-width: 700px; /* Match content width or adjust as needed */
+  /* aspect-ratio: 16 / 9; /* Example: Set a fixed aspect ratio (optional) */
+  /* height: 400px;  /* Or set a fixed height (choose one or none) */
+  margin: 2.5em auto; /* Center it and add vertical spacing */
+  overflow: hidden; /* Clip images that are outside the container bounds */
+  border-radius: 8px; /* Optional: rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Optional: subtle shadow */
+  background-color: #e0d8cd; /* Fallback background while images load */
+}
+
+/* Make sure container takes space even before images load IF using aspect-ratio */
+#image-slideshow::before {
+    content: "";
+    display: block;
+    padding-bottom: 56.25%; /* Corresponds to 16:9 aspect ratio (9/16*100) - Adjust if needed */
+    /* If you set a fixed height on #image-slideshow instead, you don't need this ::before rule */
+}
+
+
+.slide-image {
+  position: absolute; /* Stack images on top of each other */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the container area without distortion */
+  opacity: 0; /* Hide images by default */
+  transition: opacity 1.5s ease-in-out; /* Smooth fade transition (adjust duration) */
+  z-index: 1; /* Base layer for inactive slides */
+}
+
+.slide-image.active {
+  opacity: 1; /* Make the active image visible */
+  z-index: 2; /* Ensure active slide is on top */
+}
+
 /* --- Reset and Base --- */
 body {
   margin: 0;
@@ -136,8 +175,16 @@ h1#welcome-text {
   line-height: 1.6;
   color: #5a4d45; /* Slightly different shade */
 }
-/* ====================================== */
 
+/* ====================================== */
+#explanation-text {
+  white-space: pre-line; /* Preserves line breaks, collapses extra spaces */
+}
+
+/* ====================================== */
+#token-text {
+  white-space: pre-line; /* Preserves line breaks, collapses extra spaces */
+}
 
 /* --- Menu Styling (Keep existing) --- */
 #info h3 {
@@ -280,6 +327,10 @@ footer a:hover {
   .whatsapp-icon {
     height: 1.1em; /* Slightly smaller icon on mobile? */
   }
+  
+  #image-slideshow {
+    max-width: 95%; /* Allow slightly more width on mobile */
+    /* Adjust aspect-ratio or height for mobile if needed */
 
   footer::after { /* Adjust seashell position/size */
     bottom: 10px;

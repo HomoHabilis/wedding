@@ -3,9 +3,27 @@ const texts = {
   it: {
     welcome: "Benvenuti al nostro matrimonio!",
     // === NEW EXPLANATION TEXT ===
-    explanation: "Siamo così felici di condividere questo giorno speciale con voi! Qui sotto trovate il menù della cena. Speriamo sia di vostro gradimento.",
+    explanation: `Siamo così felici di condividere questo giorno speciale con voi!
+
+    Vuoi fare una dedica agli sposi? Chiama <strong>Bruno</strong>!
+
+    Spendi i 2 cuoricini Mr&Ms per stampare le tue 2 foto più belle!
+    Conserva una polaroid souvenir e incolla l’altra nell’album degli sposi!
+    Arianna gestisce il photobooth. Contattatela su WhatsApp !
+
+    Cimentati nella tua prima routine swing durante il workshop di barefoot proposto da Bruno!
+
+    Preparati a fare squadra durante il blind test, indovinando le canzoni proposte da Tristan! Un grande premio in palio per il tavolo vincitore!
+
+    Grazie per la vostra partecipazione e buon divertimento!
+
+    Elisa e Jérémie`,
     // ============================
-    tokenInfo: "Riceverete 2 gettoni da stampare con Arianna, che gestisce il photobooth. Contattatela su WhatsApp, il link è qui sotto.", // Merged info here
+    tokenInfo: `Spendi i 2 cuoricini di legno per stampare le 2 foto più belle!
+
+    Conserva una polaroid souvenir e incolla l’altra nell’album degli sposi!
+
+    Arianna gestisce il photobooth. Contattatela su WhatsApp, il link è qui sotto.`, // Merged info here
     whatsappMsg: "Ciao! Sono al matrimonio e voglio inviarti foto da stampare",
     whatsappIntro: "Contatta il Photobooth:", // NEW: Text before the link
     whatsappLinkText: "Invia foto su WhatsApp", // NEW: Text next to the icon
@@ -33,7 +51,8 @@ const texts = {
   fr: {
     welcome: "Bienvenue à notre mariage !",
     // === NEW EXPLANATION TEXT ===
-    explanation: "Nous sommes si heureux de partager ce jour spécial avec vous ! Vous trouverez ci-dessous le menu du dîner. Nous espérons qu'il vous plaira.",
+    explanation: `Nous sommes si heureux de partager ce jour spécial avec vous !
+    Pour une dédicace aux mariés, contactez Tristan!`,
     // ============================
     tokenInfo: "Vous recevrez 2 jetons pour imprimer des photos avec Arianna, responsable du photobooth. Contactez-la sur WhatsApp via le lien ci-dessous.", // Merged info here
     whatsappMsg: "Bonjour ! Je suis au mariage et je veux vous envoyer des photos", // Slightly adjusted message
@@ -109,7 +128,7 @@ const waLinkTextEl = document.getElementById("whatsapp-link-text");
 const langButtons = document.querySelectorAll(".lang-switch button"); // Get all lang buttons
 
 // 3. WhatsApp number (use WhatsApp Business if possible)
-const waNumber = "393515535262";
+const waNumber = "00393396754220";
 
 // 4. Language switch buttons
 langButtons.forEach(btn => {
@@ -140,7 +159,7 @@ function renderLanguage() {
 
   // Update simple text elements
   welcomeEl.textContent = lang.welcome;
-  explanationEl.textContent = lang.explanation; // Update explanation text
+  explanationEl.innerHTML = lang.explanation; // Update explanation text
   tokenEl.textContent = lang.tokenInfo;
 
   const msg = encodeURIComponent(lang.whatsappMsg);
@@ -170,3 +189,59 @@ function renderLanguage() {
 
 // --- Optional: Add persistence using localStorage ---
 renderLanguage(); // Initial render
+
+
+// === NEW SLIDESHOW SCRIPT ===
+const slideshowContainer = document.getElementById('image-slideshow');
+// Check if the slideshow container exists on the page
+if (slideshowContainer) {
+  const slides = slideshowContainer.querySelectorAll('.slide-image');
+  let currentSlideIndex = 0;
+  const slideIntervalTime = 4000; // Time each slide is visible (in milliseconds - 4 seconds)
+
+  function showSlide(index) {
+    // Ensure the index is valid
+    if (index < 0 || index >= slides.length) {
+      console.error("Invalid slide index:", index);
+      return;
+    }
+
+    // Remove active class from all slides
+    slides.forEach(slide => {
+      slide.classList.remove('active');
+    });
+
+    // Add active class to the new current slide
+    slides[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    // Calculate the index of the next slide
+    let nextIndex = currentSlideIndex + 1;
+
+    // Loop back to the first slide if we've passed the last one
+    if (nextIndex >= slides.length) {
+      nextIndex = 0;
+    }
+
+    // Update the current index
+    currentSlideIndex = nextIndex;
+
+    // Show the next slide
+    showSlide(currentSlideIndex);
+  }
+
+  // Start the slideshow only if there's more than one slide
+  if (slides.length > 1) {
+    // Show the first slide immediately (it already has .active, but good practice)
+    showSlide(currentSlideIndex);
+    // Set an interval to automatically switch to the next slide
+    setInterval(nextSlide, slideIntervalTime);
+  } else if (slides.length === 1) {
+    // If only one slide, just ensure it's active
+    slides[0].classList.add('active');
+  }
+} else {
+  console.log("Slideshow container not found."); // Optional message
+}
+// === END SLIDESHOW SCRIPT ===
