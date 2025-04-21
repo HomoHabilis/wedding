@@ -30,62 +30,140 @@ const texts = {
       { title: "Antipasti", dishes: ["Insalatina di seppie, gamberi e verdure croccanti in citronette", "Salmone marinato su cheese cake di taralli, robiola al profumo di arancia", "Parmigiana di melanzane, gambero panko, crema di stracciatella", "Tonno scottato, guacamole e pure di mango"] },
       { title: "Primi", dishes: ["Cappelli del prete in bisque di crostacei, gamberi e pesto di pistacchi", "Strozzapreti, seppioline, crema e chips di carciofi"] },
       { title: "Secondo", dishes: ["Filetto di branzino alla Mediterrana, olive taggiasche e pomodorini confit", "Patate al forno", "Misticanza fiorita, mele e vinaigrette"] },
-      { title: "Dolce", dishes: ["Dolci misti e frutta", "Dolce sorpresa"] }
+      { title: "Dolce", dishes: ["Torta nuziale", "Dolce sorpresa"] },
+      { title: "Dalla Cantina", dishes: ["Terracruda Brut Rosé", "Guerriero Bianco Az Agraria Guerrieri", "Passerina Terra Fageto"] }
     ]
   },
-  en: {
+  en: { // ENGLISH
     welcome: "Welcome to our wedding!",
-	  explanation: "We are so happy to share this special day with you! Below you can find the dinner menu. We hope you enjoy it.  {{WHATSAPP_LINK}}",    
-    whatsappMsg: "Hi! I'm at the wedding and need to send you photos for printing.", // Slightly adjusted message
-    whatsappLinkText: "Send photos on WhatsApp", // NEW
-    menu: [
+    explanation: `We are so happy to share this special day with you!
+    &hearts;
+    <strong>DEDICATION</strong>
+    Want to make a dedication to the newlyweds? Talk to <strong>Bruno</strong>!
+    &hearts;
+    <strong>PHOTOBOOTH</strong>
+    Spend your 2 Mr&Ms heart tokens to print your 2 favorite photos!
+    Keep one Polaroid souvenir and paste the other in the couple's album!
+    <strong>Arianna</strong> manages the photo booth. Contact her on WhatsApp!
+    {{WHATSAPP_LINK}}
+    &hearts;
+    <strong>BAREFOOT</strong>
+    Try out swing dancing during the barefoot workshop led by <strong>Bruno</strong>!
+    &hearts;
+    <strong>BLIND TEST</strong>
+    Get ready to team up with your table mates during the blind test, guessing the songs played by <strong>Tristan</strong>! A grand prize is up for grabs for the winning table!
+    &hearts;
+
+    Thank you for celebrating with us and have fun!
+
+    &hearts;  Elisa & Jérémie   &hearts;`,
+    whatsappMsg: "Hi! I'm at the wedding and need to send you photos for printing.",
+    whatsappLinkText: "Send photos on WhatsApp",
+    menu: [ // Copied menu structure, replace with English dishes if needed
       { title: "Appetizers", dishes: ["Cuttlefish salad, shrimp, and crispy vegetables in citronette", "Marinated salmon on taralli cheesecake, orange-scented robiola cheese", "Eggplant parmigiana, panko shrimp, stracciatella cream", "Seared tuna, guacamole, and mango puree"] },
       { title: "First Courses", dishes: ["Priest's hats pasta in crustacean bisque, shrimp, and pistachio pesto", "Strozzapreti pasta, cuttlefish, artichoke cream, and chips"] },
       { title: "Second Course", dishes: ["Mediterranean-style sea bass fillet, Taggiasca olives, and confit cherry tomatoes", "Baked potatoes", "Flowered mixed greens salad, apples, and vinaigrette"] },
-      { title: "Dessert", dishes: ["Mixed pastries and fruit", "Sweet surprise"] }
+      { title: "Dessert", dishes: ["Mixed pastries and fruit", "Sweet surprise"] },
+      { title: "Wine Cellar", dishes: ["Terracruda Brut Rosé", "Guerriero Bianco Az Agraria Guerrieri", "Passerina Terra Fageto"] }
     ]
   },
-  fr: {
+  fr: { // FRANÇAIS
     welcome: "Bienvenue à notre mariage !",
-    // === NEW EXPLANATION TEXT ===
-    explanation: `Nous sommes si heureux de partager ce jour spécial avec vous !
-    Pour une dédicace aux mariés, contactez Tristan!  {{WHATSAPP_LINK}}`,
-    // ============================
-    whatsappMsg: "Bonjour ! Je suis au mariage et je veux vous envoyer des photos", // Slightly adjusted message
-    whatsappLinkText: "Envoyer photos sur WhatsApp", // NEW
-    menu: [
-      { title: "Entrées", dishes: ["Salade de seiches, crevettes et légumes croquants en citronnette", "Saumon mariné sur cheesecake de taralli, robiola parfumée à l'orange", "Parmigiana d'aubergines, crevette panko, crème de stracciatella", "Thon poêlé, guacamole et purée de mangue"] },
-      { title: "Premiers Plats", dishes: ["« Cappelli del prete » en bisque de crustacés, crevettes et pesto de pistaches", "« Strozzapreti », petites seiches, crème et chips d'artichauts"] },
-      { title: "Deuxième Plat", dishes: ["Filet de bar à la Méditerranéenne, olives Taggiasche et tomates cerises confites", "Pommes de terre au four", "Mesclun fleuri, pommes et vinaigrette"] },
-      { title: "Dessert", dishes: ["Pâtisseries variées et fruits", "Douce surprise"] }
+    explanation: `Nous sommes si heureux de partager cette journée spéciale avec vous !
+    &hearts;
+    <strong>DÉDICACE</strong>
+    Vous voulez faire une dédicace aux mariés ? Adressez-vous à <strong>Tristan</strong> !
+    &hearts;
+    <strong>PHOTOBOOTH</strong>
+    Utilisez vos 2 jetons-cœur Mr&Ms pour imprimer vos 2 photos préférées !
+    Gardez un polaroïd en souvenir et collez l’autre dans l’album des mariés !
+    <strong>Arianna</strong> gère le photobooth. Contactez-la sur WhatsApp !
+    {{WHATSAPP_LINK}}
+    &hearts;
+    <strong>BAREFOOT</strong>
+    Essayez-vous à la danse swing pendant l'atelier pieds nus proposé par <strong>Bruno</strong> !
+    &hearts;
+    <strong>BLIND TEST</strong>
+    Préparez-vous à faire équipe avec vos compagnons de table pendant le blind test, en devinant les chansons proposées par <strong>Tristan</strong> ! Un grand prix est en jeu pour la table gagnante !
+    &hearts;
+
+    Merci pour votre présence et amusez-vous bien !
+
+    &hearts;  Elisa et Jérémie   &hearts;`,
+    whatsappMsg: "Bonjour ! Je suis au mariage et je veux vous envoyer des photos à imprimer",
+    whatsappLinkText: "Envoyer photos sur WhatsApp",
+    menu: [ // Copied menu structure, replace with French dishes if needed
+        { title: "Entrées", dishes: ["Salade de seiches, crevettes et légumes croquants en citronnette", "Saumon mariné sur cheesecake de taralli, robiola parfumée à l'orange", "Parmigiana d'aubergines, crevette panko, crème de stracciatella", "Thon poêlé, guacamole et purée de mangue"] },
+        { title: "Premiers Plats", dishes: ["« Cappelli del prete » en bisque de crustacés, crevettes et pesto de pistaches", "« Strozzapreti », petites seiches, crème et chips d'artichauts"] },
+        { title: "Deuxième Plat", dishes: ["Filet de bar à la Méditerranéenne, olives Taggiasche et tomates cerises confites", "Pommes de terre rôties", "Mesclun fleuri, pommes et vinaigrette"] },
+        { title: "Dessert", dishes: ["Gâteau de mariage", "Douce surprise"] },
+        { title: "De la Cave", dishes: ["Terracruda Brut Rosé", "Guerriero Bianco Az Agraria Guerrieri", "Passerina Terra Fageto"] }
     ]
   },
-  es: {
+  es: { // ESPAÑOL
     welcome: "¡Bienvenidos a nuestra boda!",
-    // === NEW EXPLANATION TEXT ===
-    explanation: "¡Estamos muy felices de compartir este día especial con ustedes! A continuación encontrarán el menú de la cena. Esperamos que lo disfruten.  {{WHATSAPP_LINK}}",
-    // ============================
-    whatsappMsg: "¡Hola! Estoy en la boda y necesito enviarte fotos para imprimir.", // <-- UPDATED
-    whatsappLinkText: "Enviar fotos por WhatsApp", // NEW
-    menu: [
-      { title: "Aperitivos", dishes: ["Ensalada de sepia, gambas y verduras crujientes en vinagreta de limón", "Salmón marinado sobre cheesecake de taralli, robiola con aroma de naranja", "Parmigiana de berenjenas, gamba panko, crema de stracciatella", "Atún sellado, guacamole y puré de mango"] },
-      { title: "Primeros Platos", dishes: ["Pasta «Cappelli del prete» en bisque de crustáceos, gambas y pesto de pistachos", "Pasta «Strozzapreti», sepia, crema y chips de alcachofas"] },
-      { title: "Segundo Plato", dishes: ["Filete de lubina a la Mediterránea, aceitunas Taggiasca y tomates cherry confitados", "Patatas al horno", "Mezcla de hojas verdes floridas, manzanas y vinagreta"] },
-      { title: "Postre", dishes: ["Pasteles variados y fruta", "Dulce sorpresa"] }
+    explanation: `¡Estamos muy felices de compartir este día especial con ustedes!
+    &hearts;
+    <strong>DEDICATORIA</strong>
+    ¿Quieres hacer una dedicatoria a los novios? ¡Habla con <strong>Tristan</strong>!
+    &hearts;
+    <strong>PHOTOBOOTH</strong>
+    ¡Usa tus 2 fichas-corazón Mr&Ms para imprimir tus 2 fotos favoritas!
+    ¡Conserva una polaroid de recuerdo y pega la otra en el álbum de los novios!
+    <strong>Arianna</strong> gestiona el photobooth. ¡Contáctala por WhatsApp!
+    {{WHATSAPP_LINK}}
+    &hearts;
+    <strong>BAREFOOT</strong>
+    ¡Anímate a bailar swing durante el taller de baile descalzo dirigido por <strong>Bruno</strong>!
+    &hearts;
+    <strong>BLIND TEST</strong>
+    ¡Prepárate para hacer equipo con tus compañeros de mesa durante el blind test, adivinando las canciones propuestas por <strong>Tristan</strong>! ¡Hay un gran premio en juego para la mesa ganadora!
+    &hearts;
+
+    ¡Gracias por acompañarnos y disfrutad!
+
+    &hearts;  Elisa y Jérémie   &hearts;`,
+    whatsappMsg: "¡Hola! Estoy en la boda y necesito enviarte fotos para imprimir.",
+    whatsappLinkText: "Enviar fotos por WhatsApp",
+    menu: [ // Copied menu structure, replace with Spanish dishes if needed
+        { title: "Aperitivos", dishes: ["Ensalada de sepia, gambas y verduras crujientes en vinagreta de limón", "Salmón marinado sobre cheesecake de taralli, robiola con aroma de naranja", "Parmigiana de berenjenas, gamba panko, crema de stracciatella", "Atún sellado, guacamole y puré de mango"] },
+        { title: "Primeros Platos", dishes: ["Pasta «Cappelli del prete» en bisque de crustáceos, gambas y pesto de pistachos", "Pasta «Strozzapreti», sepia, crema y chips de alcachofas"] },
+        { title: "Segundo Plato", dishes: ["Filete de lubina a la Mediterránea, aceitunas Taggiasca y tomates cherry confitados", "Patatas al horno", "Mezcla de hojas verdes floridas, manzanas y vinagreta"] },
+        { title: "Postre", dishes: ["Tarta nupcial", "Dulce sorpresa"] },
+        { title: "De la Bodega", dishes: ["Terracruda Brut Rosé", "Guerriero Bianco Az Agraria Guerrieri", "Passerina Terra Fageto"] }
     ]
   },
-  fi: {
+  fi: { // SUOMI
     welcome: "Tervetuloa häihimme!",
-    // === NEW EXPLANATION TEXT ===
-    explanation: "Olemme niin onnellisia saadessamme jakaa tämän erityisen päivän kanssanne! Alta löydät illallismenun. Toivottavasti nautitte siitä.  {{WHATSAPP_LINK}}",
-    // ============================
-    whatsappMsg: "Hei! Olen häissä ja minun pitää lähettää sinulle kuvia tulostettavaksi.", // <-- UPDATED
-    whatsappLinkText: "Lähetä kuvia WhatsAppissa", // NEW
-    menu: [
-      { title: "Alkuruoat", dishes: ["Seepiasalaatti, katkarapuja ja rapeita vihanneksia sitruunakastikkeessa", "Marinoitua lohta taralli-juustokakulla, appelsiinintuoksuista robiola-juustoa", "Munakoiso-parmigiana, panko-katkarapuja, stracciatella-kermaa", "Paistettua tonnikalaa, guacamolea ja mangososetta"] },
-      { title: "Ensimmäiset pääruoat", dishes: ["«Cappelli del prete» -pasta äyriäisbisquessa, katkarapuja ja pistaasipestoa", "«Strozzapreti»-pasta, seepiaa, artisokkakreemiä ja -lastuja"] },
-      { title: "Toinen pääruoka", dishes: ["Välimerellinen meriahvenfilee, Taggiasca-oliiveja ja confit-kirsikkatomaatteja", "Uuniperunat", "Kukkiva sekasalaatti, omenoita ja vinaigrette-kastiketta"] },
-      { title: "Jälkiruoka", dishes: ["Valikoima leivonnaisia ja hedelmiä", "Makea yllätys"] }
+    explanation: `Olemme niin onnellisia saadessamme jakaa tämän erityisen päivän kanssanne!
+    &hearts;
+    <strong>OMISTUS</strong>
+    Haluatko jättää omistuksen hääparille? Kysy <strong>Tristaniin</strong>!
+    &hearts;
+    <strong>PHOTOBOOTH</strong>
+    Käytä 2 Mr&Ms-sydänpolettiasi tulostaaksesi 2 suosikkikuvaasi!
+    Pidä yksi polaroid-kuva muistona ja liimaa toinen hääparin albumiin!
+    <strong>Arianna</strong> hoitaa photoboothia. Ota häneen yhteyttä WhatsAppilla!
+    {{WHATSAPP_LINK}}
+    &hearts;
+    <strong>BAREFOOT</strong>
+    Kokeile swing-tanssia <strong>Brunon</strong> vetämässä avojalkatanssi-työpajassa!
+    &hearts;
+    <strong>BLIND TEST</strong>
+    Valmistaudu lyöttäytymään yhteen pöytäseurueesi kanssa musiikkivisassa arvaamalla <strong>Tristanin</strong> soittamia kappaleita! Suuri palkinto on jaossa voittajapöydälle!
+    &hearts;
+
+    Kiitos, että juhlit kanssamme ja pidä hauskaa!
+
+    &hearts;  Elisa ja Jérémie   &hearts;`,
+    whatsappMsg: "Hei! Olen häissä ja minun pitää lähettää sinulle kuvia tulostettavaksi.",
+    whatsappLinkText: "Lähetä kuvia WhatsAppissa",
+    menu: [ // Copied menu structure, replace with Finnish dishes if needed
+        { title: "Alkuruoat", dishes: ["Seepiasalaatti, katkarapuja ja rapeita vihanneksia sitruunakastikkeessa", "Marinoitua lohta taralli-juustokakulla, appelsiinintuoksuista robiola-juustoa", "Munakoiso-parmigiana, panko-katkarapuja, stracciatella-kermaa", "Paistettua tonnikalaa, guacamolea ja mangososetta"] },
+        { title: "Ensimmäiset pääruoat", dishes: ["«Cappelli del prete» -pasta äyriäisbisquessa, katkarapuja ja pistaasipestoa", "«Strozzapreti»-pasta, seepiaa, artisokkakreemiä ja -lastuja"] },
+        { title: "Toinen pääruoka", dishes: ["Välimerellinen meriahvenfilee, Taggiasca-oliiveja ja confit-kirsikkatomaatteja", "Uuniperunat", "Kukkiva sekasalaatti, omenoita ja vinaigrette-kastiketta"] },
+        { title: "Jälkiruoka", dishes: ["Hääkakku", "Makea yllätys"] },
+        { title: "Kellarista", dishes: ["Terracruda Brut Rosé", "Guerriero Bianco Az Agraria Guerrieri", "Passerina Terra Fageto"] }
     ]
   }
 };
