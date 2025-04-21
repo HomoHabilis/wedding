@@ -4,29 +4,27 @@ const texts = {
     welcome: "Benvenuti al nostro matrimonio!",
     // === NEW EXPLANATION TEXT ===
     explanation: `Siamo così felici di condividere questo giorno speciale con voi!
-
-    Vuoi fare una dedica agli sposi? Chiama <strong>Bruno</strong>!
-
+    &hearts;
+    <strong>DEDICA</strong>
+    Vuoi fare una dedica agli sposi? Senti <strong>Bruno</strong>!
+    &hearts;
+    <strong>PHOTOBOOTH</strong>
     Spendi i 2 cuoricini Mr&Ms per stampare le tue 2 foto più belle!
     Conserva una polaroid souvenir e incolla l’altra nell’album degli sposi!
-    Arianna gestisce il photobooth. Contattatela su WhatsApp !
+    <strong>Arianna</strong> gestisce il photobooth. Contattatela su WhatsApp !
     {{WHATSAPP_LINK}}
-
-    Cimentati nella tua prima routine swing durante il workshop di barefoot proposto da Bruno!
-
-    Preparati a fare squadra durante il blind test, indovinando le canzoni proposte da Tristan! Un grande premio in palio per il tavolo vincitore!
+    &hearts;
+    <strong>BAREFOOT</strong>
+    Cimentati nel ballo swing durante il workshop di barefoot proposto da <strong>Bruno</strong>!
+    &hearts;
+    <strong>BLINDTEST</strong>
+    Preparati a fare squadra con i tuoi compagni di tavolo durante il blind test, indovinando le canzoni proposte da <strong>Tristan</strong>! Un grande premio in palio per il tavolo vincitore!
+    &hearts;
 
     Grazie per la vostra partecipazione e buon divertimento!
 
-    Elisa e Jérémie`,
-    // ============================
-    tokenInfo: `Spendi i 2 cuoricini di legno per stampare le 2 foto più belle!
-
-    Conserva una polaroid souvenir e incolla l’altra nell’album degli sposi!
-
-    Arianna gestisce il photobooth. Contattatela su WhatsApp, il link è qui sotto.`, // Merged info here
+    &hearts;  Elisa e Jérémie   &hearts;`,
     whatsappMsg: "Ciao! Sono al matrimonio e voglio inviarti foto da stampare",
-    whatsappIntro: "Contatta il Photobooth:", // NEW: Text before the link
     whatsappLinkText: "Invia foto su WhatsApp", // NEW: Text next to the icon
     menu: [
       { title: "Antipasti", dishes: ["Insalatina di seppie, gamberi e verdure croccanti in citronette", "Salmone marinato su cheese cake di taralli, robiola al profumo di arancia", "Parmigiana di melanzane, gambero panko, crema di stracciatella", "Tonno scottato, guacamole e pure di mango"] },
@@ -37,10 +35,8 @@ const texts = {
   },
   en: {
     welcome: "Welcome to our wedding!",
-	explanation: "We are so happy to share this special day with you! Below you can find the dinner menu. We hope you enjoy it.  {{WHATSAPP_LINK}}",    
-	tokenInfo: "You will receive 2 tokens to print photos with Arianna, who manages the photobooth. Contact her on WhatsApp using the link below.", // Merged info here
+	  explanation: "We are so happy to share this special day with you! Below you can find the dinner menu. We hope you enjoy it.  {{WHATSAPP_LINK}}",    
     whatsappMsg: "Hi! I'm at the wedding and need to send you photos for printing.", // Slightly adjusted message
-    whatsappIntro: "Contact Photobooth:", // NEW
     whatsappLinkText: "Send photos on WhatsApp", // NEW
     menu: [
       { title: "Appetizers", dishes: ["Cuttlefish salad, shrimp, and crispy vegetables in citronette", "Marinated salmon on taralli cheesecake, orange-scented robiola cheese", "Eggplant parmigiana, panko shrimp, stracciatella cream", "Seared tuna, guacamole, and mango puree"] },
@@ -55,9 +51,7 @@ const texts = {
     explanation: `Nous sommes si heureux de partager ce jour spécial avec vous !
     Pour une dédicace aux mariés, contactez Tristan!  {{WHATSAPP_LINK}}`,
     // ============================
-    tokenInfo: "Vous recevrez 2 jetons pour imprimer des photos avec Arianna, responsable du photobooth. Contactez-la sur WhatsApp via le lien ci-dessous.", // Merged info here
     whatsappMsg: "Bonjour ! Je suis au mariage et je veux vous envoyer des photos", // Slightly adjusted message
-    whatsappIntro: "Contacter le Photobooth:", // NEW
     whatsappLinkText: "Envoyer photos sur WhatsApp", // NEW
     menu: [
       { title: "Entrées", dishes: ["Salade de seiches, crevettes et légumes croquants en citronnette", "Saumon mariné sur cheesecake de taralli, robiola parfumée à l'orange", "Parmigiana d'aubergines, crevette panko, crème de stracciatella", "Thon poêlé, guacamole et purée de mangue"] },
@@ -71,9 +65,7 @@ const texts = {
     // === NEW EXPLANATION TEXT ===
     explanation: "¡Estamos muy felices de compartir este día especial con ustedes! A continuación encontrarán el menú de la cena. Esperamos que lo disfruten.  {{WHATSAPP_LINK}}",
     // ============================
-    tokenInfo: "Recibirán 2 fichas para imprimir fotos con Arianna, que gestiona el photobooth. Contáctala por WhatsApp usando el enlace de abajo.", // <-- UPDATED
     whatsappMsg: "¡Hola! Estoy en la boda y necesito enviarte fotos para imprimir.", // <-- UPDATED
-    whatsappIntro: "Contactar Photobooth:", // NEW
     whatsappLinkText: "Enviar fotos por WhatsApp", // NEW
     menu: [
       { title: "Aperitivos", dishes: ["Ensalada de sepia, gambas y verduras crujientes en vinagreta de limón", "Salmón marinado sobre cheesecake de taralli, robiola con aroma de naranja", "Parmigiana de berenjenas, gamba panko, crema de stracciatella", "Atún sellado, guacamole y puré de mango"] },
@@ -87,9 +79,7 @@ const texts = {
     // === NEW EXPLANATION TEXT ===
     explanation: "Olemme niin onnellisia saadessamme jakaa tämän erityisen päivän kanssanne! Alta löydät illallismenun. Toivottavasti nautitte siitä.  {{WHATSAPP_LINK}}",
     // ============================
-    tokenInfo: "Saat 2 polettia valokuvien tulostamiseen Ariannan kanssa, joka hoitaa photoboothia. Ota häneen yhteyttä WhatsAppilla alla olevan linkin kautta.", // <-- UPDATED
     whatsappMsg: "Hei! Olen häissä ja minun pitää lähettää sinulle kuvia tulostettavaksi.", // <-- UPDATED
-    whatsappIntro: "Ota yhteys Photoboothiin:", // NEW
     whatsappLinkText: "Lähetä kuvia WhatsAppissa", // NEW
     menu: [
       { title: "Alkuruoat", dishes: ["Seepiasalaatti, katkarapuja ja rapeita vihanneksia sitruunakastikkeessa", "Marinoitua lohta taralli-juustokakulla, appelsiinintuoksuista robiola-juustoa", "Munakoiso-parmigiana, panko-katkarapuja, stracciatella-kermaa", "Paistettua tonnikalaa, guacamolea ja mangososetta"] },
@@ -121,11 +111,7 @@ let currentLang = getInitialLanguage();
 // 2. DOM elements
 const welcomeEl = document.getElementById("welcome-text");
 const explanationEl = document.getElementById("explanation-text"); // Get explanation element
-const tokenEl = document.getElementById("token-text");
 const infoSectionEl = document.getElementById("info");
-const waLinkEl  = document.getElementById("whatsapp-link");
-const waIntroTextEl = document.getElementById("whatsapp-intro-text");
-const waLinkTextEl = document.getElementById("whatsapp-link-text");
 const langButtons = document.querySelectorAll(".lang-switch button"); // Get all lang buttons
 
 // 3. WhatsApp number (use WhatsApp Business if possible)
@@ -161,14 +147,8 @@ function renderLanguage() {
   // Update simple text elements
   welcomeEl.textContent = lang.welcome;
   explanationEl.innerHTML = lang.explanation; // Update explanation text
-  tokenEl.textContent = lang.tokenInfo;
 
   const msg = encodeURIComponent(lang.whatsappMsg);
-  waLinkEl.href = `https://wa.me/${waNumber}?text=${msg}`;
-  waIntroTextEl.textContent = lang.whatsappIntro + " "; // Add space after intro text
-  waLinkTextEl.textContent = lang.whatsappLinkText;     // Set text next to icon
- // --- Generate WhatsApp Link HTML ---
-
   const waHref = `https://wa.me/${waNumber}?text=${msg}`;
   // Decide if you want the icon inline. It might look cluttered. Let's try without first.
   // const whatsappLinkHTML = `<a href="${waHref}" target="_blank" class="whatsapp-link-inline">${lang.whatsappLinkText}</a>`;
