@@ -5,13 +5,14 @@ const texts = {
     // === NEW EXPLANATION TEXT ===
     explanation: `Siamo così felici di condividere questo giorno speciale con voi!
     &hearts;
-    <strong>DEDICA</strong>
-    Vuoi fare una dedica agli sposi? Senti <strong>Bruno</strong>!
+    <strong>DISCORSO</strong>
+    Vuoi fare una dedica agli sposi?
+    Senti <strong>Bruno</strong>!
     &hearts;
     <strong>PHOTOBOOTH</strong>
     Spendi i 2 cuoricini Mr&Ms per stampare le tue 2 foto più belle!
     Conserva una polaroid souvenir e incolla l’altra nell’album degli sposi!
-    <strong>Arianna</strong> gestisce il photobooth. Contattatela su WhatsApp !
+    <strong>Arianna</strong> gestisce il photobooth. Contattala su WhatsApp !
     {{WHATSAPP_LINK}}
     &hearts;
     <strong>BAREFOOT</strong>
@@ -38,8 +39,9 @@ const texts = {
     welcome: "Welcome to our wedding!",
     explanation: `We are so happy to share this special day with you!
     &hearts;
-    <strong>DEDICATION</strong>
-    Want to make a dedication to the newlyweds? Talk to <strong>Bruno</strong>!
+    <strong>SPEECH</strong>
+    Want to make a dedication to the newlyweds?
+    Talk to <strong>Tristan</strong>!
     &hearts;
     <strong>PHOTOBOOTH</strong>
     Spend your 2 Mr&Ms heart tokens to print your 2 favorite photos!
@@ -63,7 +65,7 @@ const texts = {
       { title: "Appetizers", dishes: ["Cuttlefish salad, shrimp, and crispy vegetables in citronette", "Marinated salmon on taralli cheesecake, orange-scented robiola cheese", "Eggplant parmigiana, panko shrimp, stracciatella cream", "Seared tuna, guacamole, and mango puree"] },
       { title: "First Courses", dishes: ["Priest's hats pasta in crustacean bisque, shrimp, and pistachio pesto", "Strozzapreti pasta, cuttlefish, artichoke cream, and chips"] },
       { title: "Second Course", dishes: ["Mediterranean-style sea bass fillet, Taggiasca olives, and confit cherry tomatoes", "Baked potatoes", "Flowered mixed greens salad, apples, and vinaigrette"] },
-      { title: "Dessert", dishes: ["Mixed pastries and fruit", "Sweet surprise"] },
+      { title: "Dessert", dishes: ["Wedding cake", "Sweet surprise"] },
       { title: "Wine Cellar", dishes: ["Terracruda Brut Rosé", "Guerriero Bianco Az Agraria Guerrieri", "Passerina Terra Fageto"] }
     ]
   },
@@ -72,7 +74,8 @@ const texts = {
     explanation: `Nous sommes si heureux de partager cette journée spéciale avec vous !
     &hearts;
     <strong>DÉDICACE</strong>
-    Vous voulez faire une dédicace aux mariés ? Adressez-vous à <strong>Tristan</strong> !
+    Vous voulez faire une dédicace aux mariés ?
+    Adressez-vous à <strong>Tristan</strong> !
     &hearts;
     <strong>PHOTOBOOTH</strong>
     Utilisez vos 2 jetons-cœur Mr&Ms pour imprimer vos 2 photos préférées !
@@ -105,7 +108,8 @@ const texts = {
     explanation: `¡Estamos muy felices de compartir este día especial con ustedes!
     &hearts;
     <strong>DEDICATORIA</strong>
-    ¿Quieres hacer una dedicatoria a los novios? ¡Habla con <strong>Tristan</strong>!
+    ¿Quieres hacer una dedicatoria a los novios?
+    ¡Habla con <strong>Tristan</strong>!
     &hearts;
     <strong>PHOTOBOOTH</strong>
     ¡Usa tus 2 fichas-corazón Mr&Ms para imprimir tus 2 fotos favoritas!
@@ -138,7 +142,8 @@ const texts = {
     explanation: `Olemme niin onnellisia saadessamme jakaa tämän erityisen päivän kanssanne!
     &hearts;
     <strong>OMISTUS</strong>
-    Haluatko jättää omistuksen hääparille? Kysy <strong>Tristaniin</strong>!
+    Haluatko jättää omistuksen hääparille?
+    Kysy <strong>Tristaniin</strong>!
     &hearts;
     <strong>PHOTOBOOTH</strong>
     Käytä 2 Mr&Ms-sydänpolettiasi tulostaaksesi 2 suosikkikuvaasi!
