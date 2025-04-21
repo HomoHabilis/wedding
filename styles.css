@@ -215,7 +215,7 @@ h1#welcome-text {
 footer {
   margin-top: 3em;
   text-align: center;
-  font-size: 0.9em;
+  font-size: 2em;
   color: #7a6d65; /* Softer text color */
   border-top: 1px solid #dcd0c0; /* Subtle top border */
   padding-top: 1.5em;
