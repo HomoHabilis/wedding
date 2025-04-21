@@ -193,7 +193,7 @@ const infoSectionEl = document.getElementById("info");
 const langButtons = document.querySelectorAll(".lang-switch button"); // Get all lang buttons
 
 // 3. WhatsApp number (use WhatsApp Business if possible)
-const waNumber = "00393396754220";
+const waNumber = "+393396754220";
 
 // 4. Language switch buttons
 langButtons.forEach(btn => {
