@@ -233,6 +233,28 @@ footer a:hover {
   text-decoration: underline;
 }
 
+/* --- Add styles for the INLINE WhatsApp link --- */
+.whatsapp-link-inline {
+  color: #008080; /* Match existing link color */
+  text-decoration: underline; /* Make it clear it's a link inline */
+  font-weight: bold; /* Optional: make the link stand out */
+  /* white-space: nowrap; */ /* Optional: prevent link from breaking mid-text */
+}
+
+.whatsapp-link-inline:hover {
+  color: #006a6a; /* Slightly darker on hover */
+  text-decoration: none; /* Optional: remove underline on hover */
+}
+
+/* Specific styles for the icon IF used inline */
+.whatsapp-icon-inline {
+  height: 2.2em;   /* Make it smaller, same size as text */
+  width: auto;
+  margin-right: 3px; /* Reduce space next to it */
+  vertical-align: -0.6em; /* Fine-tune vertical alignment with text */
+  display: inline-block; /* Necessary for inline alignment */
+}
+
 /* Style for the introductory text (optional) */
 #whatsapp-intro-text {
   /* Add specific styles if needed, e.g., font-weight: bold; */

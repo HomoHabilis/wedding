@@ -10,6 +10,7 @@ const texts = {
     Spendi i 2 cuoricini Mr&Ms per stampare le tue 2 foto più belle!
     Conserva una polaroid souvenir e incolla l’altra nell’album degli sposi!
     Arianna gestisce il photobooth. Contattatela su WhatsApp !
+    {{WHATSAPP_LINK}}
 
     Cimentati nella tua prima routine swing durante il workshop di barefoot proposto da Bruno!
 
@@ -36,7 +37,7 @@ const texts = {
   },
   en: {
     welcome: "Welcome to our wedding!",
-	explanation: "We are so happy to share this special day with you! Below you can find the dinner menu. We hope you enjoy it.",    
+	explanation: "We are so happy to share this special day with you! Below you can find the dinner menu. We hope you enjoy it.  {{WHATSAPP_LINK}}",    
 	tokenInfo: "You will receive 2 tokens to print photos with Arianna, who manages the photobooth. Contact her on WhatsApp using the link below.", // Merged info here
     whatsappMsg: "Hi! I'm at the wedding and need to send you photos for printing.", // Slightly adjusted message
     whatsappIntro: "Contact Photobooth:", // NEW
@@ -52,7 +53,7 @@ const texts = {
     welcome: "Bienvenue à notre mariage !",
     // === NEW EXPLANATION TEXT ===
     explanation: `Nous sommes si heureux de partager ce jour spécial avec vous !
-    Pour une dédicace aux mariés, contactez Tristan!`,
+    Pour une dédicace aux mariés, contactez Tristan!  {{WHATSAPP_LINK}}`,
     // ============================
     tokenInfo: "Vous recevrez 2 jetons pour imprimer des photos avec Arianna, responsable du photobooth. Contactez-la sur WhatsApp via le lien ci-dessous.", // Merged info here
     whatsappMsg: "Bonjour ! Je suis au mariage et je veux vous envoyer des photos", // Slightly adjusted message
@@ -68,7 +69,7 @@ const texts = {
   es: {
     welcome: "¡Bienvenidos a nuestra boda!",
     // === NEW EXPLANATION TEXT ===
-    explanation: "¡Estamos muy felices de compartir este día especial con ustedes! A continuación encontrarán el menú de la cena. Esperamos que lo disfruten.",
+    explanation: "¡Estamos muy felices de compartir este día especial con ustedes! A continuación encontrarán el menú de la cena. Esperamos que lo disfruten.  {{WHATSAPP_LINK}}",
     // ============================
     tokenInfo: "Recibirán 2 fichas para imprimir fotos con Arianna, que gestiona el photobooth. Contáctala por WhatsApp usando el enlace de abajo.", // <-- UPDATED
     whatsappMsg: "¡Hola! Estoy en la boda y necesito enviarte fotos para imprimir.", // <-- UPDATED
@@ -84,7 +85,7 @@ const texts = {
   fi: {
     welcome: "Tervetuloa häihimme!",
     // === NEW EXPLANATION TEXT ===
-    explanation: "Olemme niin onnellisia saadessamme jakaa tämän erityisen päivän kanssanne! Alta löydät illallismenun. Toivottavasti nautitte siitä.",
+    explanation: "Olemme niin onnellisia saadessamme jakaa tämän erityisen päivän kanssanne! Alta löydät illallismenun. Toivottavasti nautitte siitä.  {{WHATSAPP_LINK}}",
     // ============================
     tokenInfo: "Saat 2 polettia valokuvien tulostamiseen Ariannan kanssa, joka hoitaa photoboothia. Ota häneen yhteyttä WhatsAppilla alla olevan linkin kautta.", // <-- UPDATED
     whatsappMsg: "Hei! Olen häissä ja minun pitää lähettää sinulle kuvia tulostettavaksi.", // <-- UPDATED
@@ -166,6 +167,24 @@ function renderLanguage() {
   waLinkEl.href = `https://wa.me/${waNumber}?text=${msg}`;
   waIntroTextEl.textContent = lang.whatsappIntro + " "; // Add space after intro text
   waLinkTextEl.textContent = lang.whatsappLinkText;     // Set text next to icon
+ // --- Generate WhatsApp Link HTML ---
+
+  const waHref = `https://wa.me/${waNumber}?text=${msg}`;
+  // Decide if you want the icon inline. It might look cluttered. Let's try without first.
+  // const whatsappLinkHTML = `<a href="${waHref}" target="_blank" class="whatsapp-link-inline">${lang.whatsappLinkText}</a>`;
+  // OR If you want the icon:
+  const whatsappLinkHTML = `<a href="${waHref}" target="_blank" class="whatsapp-link-inline">` +
+                           `<img src="images/whatsapp-icon.svg" alt="WhatsApp" class="whatsapp-icon-inline"> ` + // Added new class
+                           `${lang.whatsappLinkText}` +
+                           `</a>`;
+
+  // --- Update Explanation Text with embedded link ---
+  // Get the template text with the placeholder
+  const explanationTemplate = lang.explanation;
+  // Replace the placeholder with the generated link HTML
+  const finalExplanationHTML = explanationTemplate.replace('{{WHATSAPP_LINK}}', whatsappLinkHTML);
+  // Use innerHTML to render the combined text and link
+  explanationEl.innerHTML = finalExplanationHTML;
 
   // Render the menu
   infoSectionEl.innerHTML = '';
