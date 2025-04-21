@@ -73,7 +73,7 @@ const texts = {
     welcome: "Bienvenue à notre mariage !",
     explanation: `Nous sommes si heureux de partager cette journée spéciale avec vous !
     &hearts;
-    <strong>DÉDICACE</strong>
+    <strong>DISCOURS</strong>
     Vous voulez faire une dédicace aux mariés ?
     Adressez-vous à <strong>Tristan</strong> !
     &hearts;
@@ -107,7 +107,7 @@ const texts = {
     welcome: "¡Bienvenidos a nuestra boda!",
     explanation: `¡Estamos muy felices de compartir este día especial con ustedes!
     &hearts;
-    <strong>DEDICATORIA</strong>
+    <strong>DISCURSO</strong>
     ¿Quieres hacer una dedicatoria a los novios?
     ¡Habla con <strong>Tristan</strong>!
     &hearts;
