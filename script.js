@@ -7,16 +7,13 @@ const texts = {
     &hearts;
     <strong>DISCORSO</strong>
     Vuoi fare una dedica agli sposi?
-    Senti <strong>Bruno</strong>!
+    Senti <strong>Mattia</strong>!
     &hearts;
     <strong>PHOTOBOOTH</strong>
     Spendi i 2 cuoricini Mr&Ms per stampare le tue 2 foto più belle!
     Conserva una polaroid souvenir e incolla l’altra nell’album degli sposi!
     <strong>Arianna</strong> gestisce il photobooth. Contattala su WhatsApp !
     {{WHATSAPP_LINK}}
-    &hearts;
-    <strong>BAREFOOT</strong>
-    Cimentati nel ballo swing durante il workshop di barefoot proposto da <strong>Bruno</strong>!
     &hearts;
     <strong>BLINDTEST</strong>
     Preparati a fare squadra con i tuoi compagni di tavolo durante il blind test, indovinando le canzoni proposte da <strong>Tristan</strong>! Un grande premio in palio per il tavolo vincitore!
@@ -49,9 +46,6 @@ const texts = {
     <strong>Arianna</strong> manages the photo booth. Contact her on WhatsApp!
     {{WHATSAPP_LINK}}
     &hearts;
-    <strong>BAREFOOT</strong>
-    Try out swing dancing during the barefoot workshop led by <strong>Bruno</strong>!
-    &hearts;
     <strong>BLIND TEST</strong>
     Get ready to team up with your table mates during the blind test, guessing the songs played by <strong>Tristan</strong>! A grand prize is up for grabs for the winning table!
     &hearts;
@@ -82,9 +76,6 @@ const texts = {
     Gardez un polaroïd en souvenir et collez l’autre dans l’album des mariés !
     <strong>Arianna</strong> gère le photobooth. Contactez-la sur WhatsApp !
     {{WHATSAPP_LINK}}
-    &hearts;
-    <strong>BAREFOOT</strong>
-    Essayez-vous à la danse swing pendant l'atelier pieds nus proposé par <strong>Bruno</strong> !
     &hearts;
     <strong>BLIND TEST</strong>
     Préparez-vous à faire équipe avec vos compagnons de table pendant le blind test, en devinant les chansons proposées par <strong>Tristan</strong> ! Un grand prix est en jeu pour la table gagnante !
@@ -117,9 +108,6 @@ const texts = {
     <strong>Arianna</strong> gestiona el photobooth. ¡Contáctala por WhatsApp!
     {{WHATSAPP_LINK}}
     &hearts;
-    <strong>BAREFOOT</strong>
-    ¡Anímate a bailar swing durante el taller de baile descalzo dirigido por <strong>Bruno</strong>!
-    &hearts;
     <strong>BLIND TEST</strong>
     ¡Prepárate para hacer equipo con tus compañeros de mesa durante el blind test, adivinando las canciones propuestas por <strong>Tristan</strong>! ¡Hay un gran premio en juego para la mesa ganadora!
     &hearts;
@@ -150,9 +138,6 @@ const texts = {
     Pidä yksi polaroid-kuva muistona ja liimaa toinen hääparin albumiin!
     <strong>Arianna</strong> hoitaa photoboothia. Ota häneen yhteyttä WhatsAppilla!
     {{WHATSAPP_LINK}}
-    &hearts;
-    <strong>BAREFOOT</strong>
-    Kokeile swing-tanssia <strong>Brunon</strong> vetämässä avojalkatanssi-työpajassa!
     &hearts;
     <strong>BLIND TEST</strong>
     Valmistaudu lyöttäytymään yhteen pöytäseurueesi kanssa musiikkivisassa arvaamalla <strong>Tristanin</strong> soittamia kappaleita! Suuri palkinto on jaossa voittajapöydälle!
